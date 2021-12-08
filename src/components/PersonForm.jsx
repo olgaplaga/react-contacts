@@ -2,12 +2,11 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { nanoid } from 'nanoid';
-import createPersistedState from 'use-persisted-state';
+import { usePeople } from '../lib/store';
 
 const PersonForm = () => {
   const [id, setId] = useState(nanoid(10));
 
-  const usePeople = createPersistedState('people');
   const [people, setPeople] = usePeople([]);
 
   const [submitDisabled, setSubmitDisabled] = useState(false);

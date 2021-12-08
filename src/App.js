@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import PersonForm from './components/PersonForm';
 import { Container, Row, Col } from 'react-bootstrap';
+import PeopleList from './components/PeopleList'
 
 function App() {
   return (
@@ -12,6 +13,10 @@ function App() {
             <PersonForm />
           </Col>
           .
+        </Row>
+        
+        <Row className="mt-md-3 mt-lg-5">
+          <Col><PeopleList/></Col>
         </Row>
       </Container>
     </>
