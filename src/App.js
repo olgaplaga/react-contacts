@@ -3,6 +3,7 @@ import React from 'react';
 import PersonForm from './components/PersonForm';
 import { Container, Row, Col } from 'react-bootstrap';
 import PeopleList from './components/PeopleList'
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Col><PeopleList/></Col>
         </Row>
       </Container>
+      <Toaster/>
     </>
   );
 }

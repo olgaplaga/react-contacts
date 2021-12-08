@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { nanoid } from 'nanoid';
 import { usePeople } from '../lib/store';
+import toast from 'react-hot-toast';
 
 const PersonForm = () => {
   const [id, setId] = useState(nanoid(10));
@@ -27,6 +28,8 @@ const PersonForm = () => {
     setId(nanoid(10));
 
     setSubmitDisabled(false);
+
+    toast.success('Saved!')
   };
 
   return (
@@ -46,6 +49,8 @@ const PersonForm = () => {
             type="text"
             placeholder="i.e.: Panicz"
             required
+            // onChange={(event) => setCurrentNickName(event.target.value)}
+            // value={currentNickName}
           />
         </Form.Group>
 

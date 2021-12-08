@@ -15,12 +15,13 @@ const PeopleList = () => {
             <th>Nick Name</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Actions</th>
           </tr>
         </thead>
 
         <tbody>
           {people.map((person) => (
-            <PersonRow person={person}/>
+            <PersonRow key={person.id} person={person}/>
           ))}
 
         </tbody>
